@@ -13,7 +13,7 @@ echo -e "Checking installed modules..."
 [ -d "MMM-CalendarWeek/" ] && echo -e "\e[32m[OK]\e[0m MMM-CalendarWeek" || echo -e "\e[91m[X]\e[0m MMM-CalendarWeek"
 [ -d "MMM-GoogleTasks/" ] && echo -e "\e[32m[OK]\e[0m MMM-GoogleTasks" || echo -e "\e[91m[X]\e[0m MMM-GoogleTasks"
 [ -d "MMM-google-route/" ] && echo -e "\e[32m[OK]\e[0m MMM-google-route" || echo -e "\e[91m[X]\e[0m MMM-google-route"
-[ -d "MMM-AssistantMk2/" ] && echo -e "\e[32m[OK]\e[0m MMM-AssistantMk2" || echo -e "\e[91m[X]\e[0m MMM-AssistantMk2"
+[ -d "MMM-GoogleAssistant/" ] && echo -e "\e[32m[OK]\e[0m MMM-GoogleAssistant" || echo -e "\e[91m[X]\e[0m MMM-GoogleAssistant"
 
 echo -e
 echo -e "Installing modules..."
@@ -57,20 +57,21 @@ then
     cd ..
 fi
 
-if [ ! -d "MMM-AssistantMk2/" ] 
+if [ ! -d "MMM-GoogleAssistant/" ] 
 then
-    echo -e "Installing MMM-AssistantMk2...\e[2m"
-    git clone https://github.com/eouia/MMM-AssistantMk2 &> /dev/null
+    echo -e "Installing MMM-GoogleAssistant...\e[2m"
+    git clone https://github.com/bugsounet/MMM-GoogleAssistant &> /dev/null
     echo -e "    - Removing .git folder"
-    cd MMM-AssistantMk2/
+    cd MMM-GoogleAssistant/
     rm -rf .git
     echo -e "    - Running npm install\e[0m"
     npm install
     cd ..
     echo -e "    - Copying credentials.json"
-    cp credentials_assistant.json MMM-AssistantMk2/credentials.json
+    cp credentials_assistant.json MMM-GoogleAssistant/credentials.json
     echo -e "    - Running authentication"
-    node MMM-AssistantMk2/auth_and_test.js
+    cd MMM-GoogleAssistant/
+    node auth_and_test.js
     echo -e "    - Copying token.json"
     cp MMM-AssistantMk2/token.json MMM-AssistantMk2/profiles/default.json
 
