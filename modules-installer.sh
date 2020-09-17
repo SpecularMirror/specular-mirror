@@ -61,9 +61,7 @@ if [ ! -d "MMM-GoogleAssistant/" ]
 then
     echo -e "Installing MMM-GoogleAssistant...\e[2m"
     git clone https://github.com/bugsounet/MMM-GoogleAssistant &> /dev/null
-    echo -e "    - Removing .git folder"
     cd MMM-GoogleAssistant/
-    rm -rf .git
     echo -e "    - Running npm install\e[0m"
     npm install
     cd ..
@@ -74,6 +72,10 @@ then
     node auth_and_test.js
     echo -e "    - Copying token.json"
     cp MMM-AssistantMk2/token.json MMM-AssistantMk2/profiles/default.json
+    echo -e "    - Removing .git folder"
+    cd MMM-GoogleAssistant/
+    rm -rf .git
+    cd ..
 
 fi
 
