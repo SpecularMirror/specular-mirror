@@ -16,9 +16,9 @@ Module.register("currentweather", {
 		timeFormat: config.timeFormat,
 		showPeriod: true,
 		showPeriodUpper: false,
-		showWindDirection: true,
+		showWindDirection: false,
 		showWindDirectionAsArrow: false,
-		useBeaufort: true,
+		useBeaufort: false,
 		useKMPHwind: false,
 		lang: config.language,
 		decimalSymbol: ".",
@@ -27,7 +27,7 @@ Module.register("currentweather", {
 		degreeLabel: false,
 		showIndoorTemperature: false,
 		showIndoorHumidity: false,
-		showFeelsLike: true,
+		showFeelsLike: false,
 
 		initialLoadDelay: 0, // 0 seconds delay
 		retryDelay: 2500,
@@ -114,16 +114,18 @@ Module.register("currentweather", {
 	// add extra information of current weather
 	// windDirection, humidity, sunrise and sunset
 	addExtraInfoWeather: function (wrapper) {
-		var small = document.createElement("div");
-		small.className = "normal medium";
-
+		//var small = document.createElement("div");
+		var large = document.createElement("div");
+		//small.className = "normal medium";
+		large.className = "light";
+		/*
 		var windIcon = document.createElement("span");
 		windIcon.className = "wi wi-strong-wind dimmed";
-		small.appendChild(windIcon);
+		//small.appendChild(windIcon); -Hiding
 
 		var windSpeed = document.createElement("span");
 		windSpeed.innerHTML = " " + this.windSpeed;
-		small.appendChild(windSpeed);
+		//small.appendChild(windSpeed); -Hiding
 
 		if (this.config.showWindDirection) {
 			var windDirection = document.createElement("sup");
@@ -155,18 +157,19 @@ Module.register("currentweather", {
 			small.appendChild(supspacer);
 			small.appendChild(humidityIcon);
 		}
+*/
+		if (this.config.hideTemp === false) {
+			var weatherIcon = document.createElement("span");
+			weatherIcon.className = "wi weathericon " + this.weatherType;
+			large.appendChild(weatherIcon);
 
-		if (this.config.showSun) {
-			var sunriseSunsetIcon = document.createElement("span");
-			sunriseSunsetIcon.className = "wi dimmed " + this.sunriseSunsetIcon;
-			small.appendChild(sunriseSunsetIcon);
-
-			var sunriseSunsetTime = document.createElement("span");
-			sunriseSunsetTime.innerHTML = " " + this.sunriseSunsetTime;
-			small.appendChild(sunriseSunsetTime);
+			/*var temperature = document.createElement("span");
+			temperature.className = "bright";
+			temperature.innerHTML = " " + this.temperature.replace(".", this.config.decimalSymbol) + degreeLabel;
+			large.appendChild(temperature);*/
 		}
 
-		wrapper.appendChild(small);
+		wrapper.appendChild(large);
 	},
 
 	// Override dom generator.
@@ -216,9 +219,9 @@ Module.register("currentweather", {
 		}
 
 		if (this.config.hideTemp === false) {
-			var weatherIcon = document.createElement("span");
-			weatherIcon.className = "wi weathericon " + this.weatherType;
-			large.appendChild(weatherIcon);
+			//var weatherIcon = document.createElement("span");
+			//weatherIcon.className = "wi weathericon " + this.weatherType;
+			//large.appendChild(weatherIcon);
 
 			var temperature = document.createElement("span");
 			temperature.className = "bright";
@@ -259,6 +262,19 @@ Module.register("currentweather", {
 			feelsLike.innerHTML = this.translate("FEELS") + " " + this.feelsLike + degreeLabel;
 			small.appendChild(feelsLike);
 
+			wrapper.appendChild(small);
+		}
+
+		if (this.config.showSun) {
+			var small = document.createElement("div");
+			small.className = "normal medium";
+			var sunriseSunsetIcon = document.createElement("span");
+			sunriseSunsetIcon.className = "wi dimmed " + this.sunriseSunsetIcon;
+			small.appendChild(sunriseSunsetIcon);
+
+			var sunriseSunsetTime = document.createElement("span");
+			sunriseSunsetTime.innerHTML = " " + this.sunriseSunsetTime;
+			small.appendChild(sunriseSunsetTime);
 			wrapper.appendChild(small);
 		}
 

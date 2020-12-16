@@ -1,0 +1,58 @@
+@font-face {
+  font-family: Finador;
+  font-style: normal;
+  font-weight: 100;
+  src: local("Finador Thin"), local("Finador-Thin"), url("node_modules/Finador-fontface/fonts/Finador/Finador-Thin.otf") format("otf"), url("node_modules/Finador-fontface/fonts/Finador/Finador-Thin.otf") format("otf");
+}
+
+@font-face {
+  font-family: "Finador Condensed";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Finador Condensed Light"), local("FinadorCondensed-Light"), url("node_modules/Finador-fontface/fonts/Finador-condensed/Finador-Condensed-Light.otf") format("otf"),
+    url("node_modules/Finador-fontface/fonts/Finador-condensed/Finador-Condensed-Light.otf") format("otf");
+}
+
+@font-face {
+  font-family: "Finador Condensed";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Finador Condensed"), local("FinadorCondensed-Regular"), url("node_modules/Finador-fontface/fonts/Finador-condensed/Finador-Condensed-Regular.otf") format("otf"),
+    url("node_modules/Finador-fontface/fonts/Finador-condensed/Finador-Condensed-Regular.otf") format("otf");
+}
+
+@font-face {
+  font-family: "Finador Condensed";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Finador Condensed Bold"), local("FinadorCondensed-Bold"), url("node_modules/Finador-fontface/fonts/Finador-condensed/Finador-Condensed-Bold.otf") format("otf"),
+    url("node_modules/Finador-fontface/fonts/Finador-condensed/Finador-Condensed-Bold.otf") format("otf");
+}
+
+@font-face {
+  font-family: Finador;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Finador"), local("Finador-Regular"), url("node_modules/Finador-fontface/fonts/Finador/Finador-Regular.otf") format("otf"), url("node_modules/Finador-fontface/fonts/Finador/Finador-Regular.otf") format("otf");
+}
+
+@font-face {
+  font-family: Finador;
+  font-style: normal;
+  font-weight: 500;
+  src: local("Finador Medium"), local("Finador-Medium"), url("node_modules/Finador-fontface/fonts/Finador/Finador-Medium.otf") format("otf"), url("node_modules/Finador-fontface/fonts/Finador/Finador-Medium.otf") format("otf");
+}
+
+@font-face {
+  font-family: Finador;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Finador Bold"), local("Finador-Bold"), url("node_modules/Finador-fontface/fonts/Finador/Finador-Bold.otf") format("otf"), url("node_modules/Finador-fontface/fonts/Finador/Finador-Bold.otf") format("otf");
+}
+
+@font-face {
+  font-family: Finador;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Finador Light"), local("Finador-Light"), url("node_modules/Finador-fontface/fonts/Finador/Finador-Light.otf") format("otf"), url("node_modules/Finador-fontface/fonts/Finador/Finador-Light.otf") format("otf");
+}

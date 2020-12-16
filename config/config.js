@@ -41,10 +41,10 @@ var config = {
 		{
 			module: "alert",
 		},
-		{
+		/*{
 			module: "updatenotification",
 			position: "top_bar"
-		},
+		},*/
 		{
 			module: "clock",
 			position: "top_left"
@@ -58,7 +58,7 @@ var config = {
 				appid: "9e992cd96c914586f417d9ff96187b7a"
 			}
 		},
-        {
+        /*{
     		module: 'MMM-Screencast',
     		position: 'bottom_right', // This position is for a hidden <div /> and not the screencast window
     		config: {
@@ -88,7 +88,7 @@ var config = {
 				locationID: "3173435", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
 				appid: "9e992cd96c914586f417d9ff96187b7a"
 			}
-		},
+		},*/
 		{
 			module: "MMM-GoogleAssistant",
 			position: "top_right",
@@ -100,7 +100,7 @@ var config = {
 			updateDelay: 500
 			}
 		},
-		{
+		/*{
             module: 'MMM-GoogleTasks',
             header: "Google Tasks",
             position: "top_left",
@@ -146,7 +146,7 @@ var config = {
 					device: "plughw:2",
 				},
 			},
-		},
+		},*/
 		{
 			module: "newsfeed",
 			position: "bottom_bar",

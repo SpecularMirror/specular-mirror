@@ -70,3 +70,7 @@
 .module.clock .moon > * {
   flex: 1;
 }
+/* Specular CSS*/
+.clock .date {
+  color: red;
+}
