@@ -14,3 +14,7 @@
   padding-bottom: 6px;
 }
 /* Specular CSS*/
+
+.currentweather {
+  text-align: left !important;
+}

@@ -71,6 +71,24 @@
   flex: 1;
 }
 /* Specular CSS*/
-.clock .date {
-  color: red;
+
+.clock .time {
+  font-size: 130px;
+  font-weight: 500;
+}
+
+#module_1_clock .module-content .time.large {
+  line-height: 130px !important;
+}
+
+#module_1_clock .module-content .date {
+  font-weight: 600 !important;
+}
+
+#module_1_clock {
+  text-align: right;
+  padding-top: 7px;
+  padding-right: 25px;
+  margin-right: 25px;
+  border-right: 4px solid #fff;
 }

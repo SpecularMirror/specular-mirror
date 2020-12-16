@@ -138,6 +138,7 @@ Module.register("clock", {
 		if (this.config.showWeek) {
 			weekWrapper.innerHTML = this.translate("WEEK", { weekNumber: now.week() });
 		}
+
 		timeWrapper.innerHTML = timeString;
 		secondsWrapper.innerHTML = now.format("ss");
 		if (this.config.showPeriodUpper) {
@@ -277,8 +278,8 @@ Module.register("clock", {
 
 		if (this.config.displayType === "digital") {
 			// Display only a digital clock
-			wrapper.appendChild(dateWrapper);
 			wrapper.appendChild(timeWrapper);
+			wrapper.appendChild(dateWrapper);
 			wrapper.appendChild(sunWrapper);
 			wrapper.appendChild(moonWrapper);
 			wrapper.appendChild(weekWrapper);

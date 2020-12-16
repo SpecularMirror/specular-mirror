@@ -27,7 +27,7 @@ body {
  */
 
 .dimmed {
-  color: #666;
+  color: #999;
 }
 
 .normal {
@@ -232,4 +232,11 @@ sup {
   width: 100%;
   border-spacing: 0;
   border-collapse: separate;
+}
+
+/*Specular CSS*/
+
+.region.top.right .container {
+  display: flex !important;
+  flex-direction: row;
 }
