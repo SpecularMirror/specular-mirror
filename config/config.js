@@ -107,10 +107,10 @@ var config = {
             config: {
                 listID: "MTE5MTA2Mzg4ODE3MTQ5NzUyMzQ6MDow"
             }
-		},
+		},*/
 		{
 			module: "MMM-CalendarWeek",
-			position: "bottom_bar",	// This can be any of the regions. Best results in bottom region.
+			position: "top_left",	// This can be any of the regions. Best results in bottom region.
 			config: {
 				colored: false,
 				coloredSymbolOnly: false,
@@ -121,7 +121,7 @@ var config = {
 					}
 				]
 			}
-		},
+		},/*
 		{
             module: 'MMM-google-route',
             position: 'top_left',
