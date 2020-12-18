@@ -1,0 +1,71 @@
+.calendar .symbol {
+  padding-left: 0;
+  padding-right: 10px;
+  font-size: 80%;
+  vertical-align: top;
+}
+
+.calendar .symbol span {
+  display: inline-block;
+  -ms-transform: translate(0, 2px); /* IE 9 */
+  -webkit-transform: translate(0, 2px); /* Safari */
+  transform: translate(0, 2px);
+}
+
+.calendar .title {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.calendar .time {
+  padding-left: 30px;
+  text-align: right;
+  vertical-align: top;
+}
+
+.col {
+  width: 20%;
+  min-width: 20%;
+  vertical-align: top;
+}
+
+/* Specular CSS */
+.MMM-CalendarWeek .rounded-day {
+  background-color: white !important;
+  border-radius: 50% !important;
+  width: 50px !important;
+  height: 50px !important;
+  color: black !important;
+  margin-top: 16px;
+  position: relative !important;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.MMM-CalendarWeek .rounded-day p {
+  position: absolute !important;
+  margin: 0;
+  margin-top: 19px;
+}
+
+#specular-header {
+  display: flex;
+  flex-direction: row;
+  height: 80px !important;
+}
+
+#specular-header p {
+  font-size: 35px !important;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-weight: 600 !important;
+}
+
+.MMM-CalendarWeek .symbol {
+  border-left: 3px solid white !important;
+}
+
+.MMM-CalendarWeek .spacer {
+  height: 15px;
+}

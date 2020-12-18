@@ -67,6 +67,7 @@ Temporary Items
 !/modules/credentials_tasks.json
 !/modules/token.json
 
+!/modules/MMM-CalendarWeek
 !/modules/MMM-CalendarWeek/**
 
 # Ignore changes to the custom css files.
