@@ -69,3 +69,10 @@
 .MMM-CalendarWeek .spacer {
   height: 15px;
 }
+
+.MMM-CalendarWeek table .time.light {
+  font-size: 25px;
+}
+.MMM-CalendarWeek table .title.bright {
+  font-size: 25px;
+}
